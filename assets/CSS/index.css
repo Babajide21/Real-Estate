@@ -1600,6 +1600,7 @@ form .forgot {
   border-radius: 50%;
   background: var(--milky-white);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border: 2px solid var(--moody-gray);
   display: flex;
   text-decoration: none;
   align-items: center;
@@ -1616,7 +1617,8 @@ form .forgot {
 .agreement {
   display: block;
   font-size: 12px;
-  color: var(--milky-white);
+  /* color: var(--milky-white); */
+  color: var(--bright-blue);
   font-family: var(--font-oleo);
   text-decoration: none;
 }
