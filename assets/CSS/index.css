@@ -1487,29 +1487,54 @@ body {
     justify-content: space-between;
 }
 .forms{
-    /* background: radial-gradient(var(--milky-white), var(--teal-blue)); */
-    background: url(../images/building.jpg);
+    background: radial-gradient(var(--milky-white), var(--teal-blue));
+    /* background: url(../images/building.jpg); */
     object-fit: cover;
     background-position: center;
     background-size: cover;
     height: 100vh;
     /* padding: 50px 20px; */
-    padding-top: 100px;
+    /* padding-top: 150px; */
 }
-.signin-container {
+.signin-container{
   background: linear-gradient(to bottom, #f9ebea7c, #bdfcf457);
   /* background: #364c4d6c;/ */
+  position: absolute;
   padding: 40px 30px;
   max-width: 450px;
+  opacity: 1;
+  left: 35%;
   backdrop-filter: blur(10px);
   border-radius: 20px;
-  margin: auto;
+  transition: all 0.4s ease;
+  margin:0 auto;
   box-shadow: 0 15px 30px var(--bright-blue);
   text-align: center;
+  top: 150px;
+  
 }
-
-.signin-container h2 {
-  color: var(--milky-white);
+.signup-container{
+    /* display: none; */
+    opacity: 0;
+    top: 80px;
+    transform: translateX(-500px);
+    transition: all 0.4s ease;
+    background: linear-gradient(to bottom, #f9ebea7c, #bdfcf457);
+    /* background: #364c4d6c;/ */
+    position: absolute;
+    padding: 40px 30px;
+    max-width: 450px;
+    /* opacity: 1; */
+    left: 35%;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin:0 auto;
+    box-shadow: 0 15px 30px var(--bright-blue);
+    text-align: center;
+}
+.signin-container h2, .signup-container h2 {
+  /* color: var(--milky-white); */
+  color: var(--brighter-blue);
   font-family: var(--font-josefin);
   margin-bottom: 30px;
   font-size: 28px;
@@ -1530,9 +1555,11 @@ form input::placeholder{
 form .forgot {
   display: block;
   text-align: left;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 13px;
-  color: var(--milky-white);
+  transition: all 0.4s ease;
+  /* color: var(--milky-white); */
+  color: var(--brighter-blue);
   /* font-weight: 600; */
   font-family: var(--font-oleo);
   letter-spacing: 1px;
@@ -1834,7 +1861,17 @@ form .forgot {
     .faq h2{
         font-size: 1.6rem;
     }
-    
+    .forms{
+        /* padding-top: 100px; */
+    }
+    .signin-container {
+        left: 20%;
+        top: 70px;
+    }
+    .signup-container{
+        left: 180px;
+        max-width: 400px;
+    }
 	/* .card {
 		width: 200px;
 		height: 280px;
@@ -2005,6 +2042,17 @@ form .forgot {
         font-size: 0.9rem;
     }
     .signin-container{
+        max-width: 300px;
+    }
+    .forms{
+        /* padding-top: 60px; */
+    }
+    .signin-container{
+        left: 10%;
+    }
+    .signup-container{
+        left: 30px;
+        top: 20px;
         max-width: 300px;
     }
 }
