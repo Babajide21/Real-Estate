@@ -165,13 +165,22 @@ body {
     position: absolute;
     bottom:50px;
     width: 60%;
+    z-index: 10;
+}
+.bannerover{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.514)10%,rgba(253, 253, 253, 0.007)80%);
+    z-index: 1;
 }
 .bannertext{
-    backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px); */
     border-radius: 10px;
     /* background: rgba(0, 0, 0, 0.219); */
     padding: 10px 20px;
     color: var(--milky-white);
+    /* z-index: -1; */
 }
 .bannertext h1{
     font-size: 2rem;
@@ -1487,7 +1496,7 @@ body {
     justify-content: space-between;
 }
 .forms{
-    background: radial-gradient(var(--milky-white), var(--teal-blue));
+    background: radial-gradient(var(--milky-white), var(--teal-blue)), var(--brighter-blue);
     /* background: url(../images/building.jpg); */
     object-fit: cover;
     background-position: center;
@@ -1556,7 +1565,7 @@ form .forgot {
   display: block;
   text-align: left;
   margin-bottom: 10px;
-  font-size: 13px;
+  font-size: 1.1rem;
   transition: all 0.4s ease;
   /* color: var(--milky-white); */
   color: var(--brighter-blue);
