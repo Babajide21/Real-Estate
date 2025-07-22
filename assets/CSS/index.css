@@ -1505,6 +1505,7 @@ body {
     background: radial-gradient(var(--milky-white), var(--teal-blue)), var(--brighter-blue);
     /* background: url(../images/building.jpg); */
     object-fit: cover;
+    justify-items: center;
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -1518,7 +1519,7 @@ body {
   padding: 40px 30px;
   max-width: 450px;
   opacity: 1;
-  left: 35%;
+  /* left: 35%; */
   backdrop-filter: blur(10px);
   border-radius: 20px;
   transition: all 0.4s ease;
@@ -1540,7 +1541,7 @@ body {
     padding: 40px 30px;
     max-width: 450px;
     /* opacity: 1; */
-    left: 35%;
+    /* left: 35%; */
     backdrop-filter: blur(10px);
     border-radius: 20px;
     margin:0 auto;
@@ -1953,11 +1954,11 @@ form .forgot {
         /* padding-top: 100px; */
     }
     .signin-container {
-        left: 20%;
+        /* left: 20%; */
         top: 70px;
     }
     .signup-container{
-        left: 180px;
+        /* left: 180px; */
         max-width: 400px;
     }
     .prop h1{
@@ -2152,10 +2153,10 @@ form .forgot {
         /* padding-top: 60px; */
     }
     .signin-container{
-        left: 10%;
+        /* left: 10%; */
     }
     .signup-container{
-        left: 30px;
+        /* left: 30px; */
         top: 20px;
         max-width: 300px;
     }
