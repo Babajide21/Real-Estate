@@ -51,7 +51,7 @@ body {
     height: 15vh;
     /* top: 10px; */
     width: 100%;
-    z-index: 999;
+    z-index: 99;
     /* margin-left: 20px;*/
     transition: all 0.65s ease;
     /* border-radius: 50px; */
@@ -117,9 +117,10 @@ body {
 .logo img{
     height: 20vh;
     margin-left: -80px;
+    display: none;
 }
 .logo p {
-    font-family: var(--font-pacific);
+    font-family: var(--font-oleo);
     color: var(--milky-white);
     letter-spacing: 2px;
     font-size: 2rem;
@@ -731,7 +732,7 @@ body {
     max-width: 1050px;
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
 .review-card{
   /* background: var(--teal-blue); */
@@ -1352,13 +1353,16 @@ body {
     background-color: #fff;
     border-radius: 12px;
     align-items: center;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.205);
     padding: 40px;
+    transition: all 0.5s ease;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
-
+.contact-section:hover{
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
 .contact-info {
     width: 40%;
 }
@@ -1409,7 +1413,7 @@ body {
     flex: 2;
     min-width: 300px;
     background-color: #f5f5f5;
-    border-radius: 12px;
+    border-radius: 20px;
     font-family: var(--font-josefin);
     padding: 30px;
 }
@@ -1465,7 +1469,8 @@ body {
 }
 
 .submit-btn:hover {
-    background-color: #900000;
+    background-color: var(--dark-teal);
+    transform: scale(1.03);
 }
 
 .faq{
@@ -1709,6 +1714,92 @@ form .forgot {
 .features i{
     margin: 0px 2px;
 }
+.details{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.detail-content{
+    background: var(--milky-white);
+    /* max-width: 500px; */
+    /* width: 90%; */
+    position: relative;
+    border-radius: 10px;
+    gap: 30px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+}
+.detail-img img{
+    height: 50vh;
+    border-radius: 10px;
+}
+.closebtn{
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 1.9rem;
+    border: none;
+    background: none;
+    transition: all 0.3s ease;
+    font-family: var(--font-NovaMono);
+}
+.closebtn:active{
+    transform: scale(0.8);
+}
+.detail-text h2{
+    font-family: var(--font-oleo);
+    margin-bottom: 20px;
+}
+.detail-text p{
+    font-family: var(--font-josefin);
+    margin-bottom: 10px;
+}
+.emailbtn{
+    width: 100%;
+    position: relative;
+    padding: 10px;
+    text-transform: capitalize;
+    border: unset;
+    background: var(--brighter-blue);
+    color: var(--milky-white);
+    font-family: var(--font-josefin);
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    border-radius: 50px;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+.emailbtn::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 50px;
+    background: var(--dark-teal);
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 0.5s;
+}
+.emailbtn:hover{
+    /* color: red; */
+    color: var(--milky-white);
+}
+.emailbtn:hover::before{
+    width: 100%;
+}
 @media screen and (max-width: 950px) {
     .headtext {
         justify-content: space-between;
@@ -1783,6 +1874,7 @@ form .forgot {
     }
     .logo img{
         margin-left: -50px;
+        display: flex;
         /* height: 5vh; */
         height: 15vh;
     }
@@ -1976,6 +2068,17 @@ form .forgot {
     .list-card img{
         height: 200px;
         width: 350px;
+    }
+    .detail-content{
+        flex-direction: column;
+    }
+    .detail-img{
+        width: 100%;
+    }
+    .detail-img img{
+        height: 30vh;
+        width: 100%;
+        object-fit: cover;
     }
 	/* .card {
 		width: 200px;
@@ -2171,5 +2274,8 @@ form .forgot {
     }
     .list-content p{
         font-size: 1rem;
+    }
+    .detail-img img{
+        height: 20vh;
     }
 }

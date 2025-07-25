@@ -86,7 +86,7 @@
     </section>
     <section class="listing">
         <div class="trending">
-            <div class="list-card">
+            <div class="list-card" id="property1">
                 <img src="../images/trendy1.jpg" alt="">
                 <div class="list-content">
                     <h2>family deluxe</h2>
@@ -103,10 +103,10 @@
                     <i class="fas fa-seedling"></i>
                 </div>
             </div>
-            <div class="list-card">
+            <div class="list-card" id="property2">
                 <img src="../images/frames-for-your-heart-2d4lAQAlbDA-unsplash.jpg" alt="">
                 <div class="list-content">
-                    <h2>family deluxe</h2>
+                    <h2>Trendy urban home</h2>
                     <p>$320,000</p>
                 </div>
                 <div class="features">
@@ -120,7 +120,7 @@
                     <!-- <i class="fas fa-seedling"></i> -->
                 </div>
             </div>
-            <div class="list-card">
+            <div class="list-card" id="property3">
                 <img src="../images/nir-log-R4Y62I2yem0-unsplash.jpg" alt="">
                 <div class="list-content">
                     <h2>royale garden</h2>
@@ -137,7 +137,7 @@
                     <!-- <i class="fas fa-seedling"></i> -->
                 </div>
             </div>
-            <div class="list-card">
+            <div class="list-card" id="property4">
                 <img src="../images/luis-redondo-CaJ787V8mqw-unsplash.jpg" alt="">
                 <div class="list-content">
                     <h2>gerald estate</h2>
@@ -154,10 +154,10 @@
                     <!-- <i class="fas fa-seedling"></i> -->
                 </div>
             </div>
-            <div class="list-card">
+            <div class="list-card" id="property5">
                 <img src="../images/eric-ardito-Z2WiPyxywQ0-unsplash.jpg" alt="">
                 <div class="list-content">
-                    <h2>family deluxe</h2>
+                    <h2>deluxe riverside home</h2>
                     <p>$320,000</p>
                 </div>
                 <div class="features">
@@ -171,10 +171,10 @@
                     <!-- <i class="fas fa-seedling"></i> -->
                 </div>
             </div>
-            <div class="list-card">
+            <div class="list-card" id="property6">
                 <img src="../images/zoshua-colah-GKwxRw6gA-c-unsplash.jpg" alt="">
                 <div class="list-content">
-                    <h2>family deluxe</h2>
+                    <h2>zen garden apartment</h2>
                     <p>$320,000</p>
                 </div>
                 <div class="features">
@@ -188,6 +188,23 @@
                     <!-- <i class="fas fa-seedling"></i> -->
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="details" id="propertyDetails">
+        <div class="detail-content">
+            <div class="detail-img">
+                <img src="../images/Abuja.jpeg" alt="" id="modalImage">
+            </div>
+            <div class="detail-text">
+                <button class="closebtn">&times;</button>
+            <h2 id="modalTitle"></h2>
+            <p class="modalPrice"></p>
+            <p class="modalDescription"></p>
+            <ul class="modalFeatures" style="margin-bottom: 50px;"></ul>
+            <button class="emailbtn">Contact an agent</button>
+        </div>
+    </div>
     </section>
 
     <section class="newsletter-section">
@@ -245,5 +262,131 @@
   </footer>
 
     <script src="../JS/index.js"></script>
+    <script>
+        
+        const modal = document.querySelector('#propertyDetails')
+        const closebtn = document.querySelector('.closebtn')
+        const modalTitle = document.querySelector('#modalTitle')
+        const modalPrice = document.querySelector('.modalPrice')
+        const modalDescription = document.querySelector('.modalDescription')
+        const modalFeatures = document.querySelector('.modalFeatures')
+        const modalImage = document.querySelector('#modalImage')
+
+
+        const properties = {
+            propety1:{
+                title:"Family Deluxe",
+                price: "$320,000",
+                description: "Spacious deluxe family home with beautiful views and modern facilities. Comfort at it's finest",
+                image:"../images/trendy1.jpg",
+                features:[
+                    "2 king-sized Beds",
+                    "High-speed Wi-Fi Coverage",
+                    "Fully Air Conditioned",
+                    "Modern Bathroom with Bathtub",
+                    "Highly secured Environment"
+                ]
+            },
+            property2: {
+                title: "Trendy Urban Home",
+                price: "$285,000",
+                description: "Modern city residence designed for young professionals. Combines style with smart living features.",
+                image: "../images/frames-for-your-heart-2d4lAQAlbDA-unsplash.jpg",
+                features: [
+                    "1 Queen-sized Bed",
+                    "Reliable Wi-Fi Connection",
+                    "Smart Temperature Control",
+                    "Stylish Bathroom with Shower",
+                    "Access to Swimming Pool"
+                ]
+            },
+            property3: {
+                title: "Royale Garden",
+                price: "$450,000",
+                description: "Luxury home surrounded by lush gardens. Perfect for serene and nature-loving families.",
+                image: "../images/nir-log-R4Y62I2yem0-unsplash.jpg",
+                features: [
+                    "3 Elegant Bedrooms",
+                    "Fast Wi-Fi Network",
+                    "Premium Air Conditioning",
+                    "Secure and Gated Community",
+                    "Luxury Bathing Area with Heater"
+                ]
+            },
+            property4: {
+                title: "Gerald Estate",
+                price: "$390,000",
+                description: "Classic estate home with premium interiors and family-centered design. Safe and quiet neighborhood.",
+                image: "../images/luis-redondo-CaJ787V8mqw-unsplash.jpg",
+                features: [
+                    "2 Spacious Bedrooms",
+                    "Unlimited Wi-Fi",
+                    "Fully Air Conditioned",
+                    "Modern Kitchen & Bathroom",
+                    "24/7 Security Surveillance"
+                ]
+            },
+            property5: {
+                title: "Deluxe Riverside Home",
+                price: "$340,000",
+                description: "Elegant riverside property offering both comfort and breathtaking scenery.",
+                image: "../images/eric-ardito-Z2WiPyxywQ0-unsplash.jpg",
+                features: [
+                    "2 King-size Beds",
+                    "Fast Internet Access",
+                    "Cozy and Cool Interior",
+                    "Luxury Bathroom with Bathtub",
+                    "Temperature-controlled Rooms"
+                ]
+            },
+            property6: {
+                title: "Zen Garden Apartment",
+                price: "$310,000",
+                description: "Minimalist-inspired apartment in a peaceful neighborhood. Ideal for small families or couples.",
+                image: "../images/zoshua-colah-GKwxRw6gA-c-unsplash.jpg",
+                features: [
+                    "1 Master Bedroom",
+                    "Stable Wi-Fi Connection",
+                    "Air Conditioned Space",
+                    "Modern Bathroom with Spa Features",
+                    "Eco-Friendly Design and Landscaping"
+                ]
+            }
+        }
+
+        const cards = document.querySelectorAll('.list-card')
+
+        cards.forEach(function(card){
+            card.addEventListener('click',function(){
+                const cardId = card.id
+                const propertyInfo = properties[cardId]
+
+                if (propertyInfo) {
+                    modalTitle.textContent = propertyInfo.title
+                    modalPrice.textContent = propertyInfo.price
+                    modalDescription.textContent = propertyInfo.description
+                    modalImage.src = propertyInfo.image
+                    modalFeatures.innerHTML = "";
+                    propertyInfo.features.forEach(function(feature){
+                        const li = document.createElement('li')
+                        li.textContent = feature
+                        modalFeatures.appendChild(li)
+                    })
+
+                    modal.style.display = "flex"
+                }
+            })
+        })
+
+        closebtn.addEventListener('click',function(){
+            modal.style.display = "none"
+        })
+
+        window.addEventListener('click',function(e){
+            if (e.target === modal) {
+                modal.style.display = "none"
+            }
+        })
+    </script>
 </body>
 </html>
