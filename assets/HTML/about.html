@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../CSS/index.css">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="../font awesome/fontawesome-free-5.15.4-web/css/all.min.css"> -->
 </head>
 <body>
@@ -69,7 +70,7 @@
                   </a>
                 </div>
     </section>
-    <section class="banner">
+    <section class="banner" data-aos="fade-up" data-aos-duration="800">
         <div class="bannertext">
             <!-- <span></span> -->
             <h1>About Heaven Gate</h1>
@@ -77,10 +78,10 @@
             <!-- <button><a href="">explore</a></button> -->
         </div>
     </section>
-    <section class="about">
+    <section class="about" data-aos="zoom-in" data-aos-duration="1000">
         <div class="aboutcontent">
             <div class="about_text">
-                <h2>our story</h2>
+                <h2 data-aos="fade-right"data-aos-duration="2000">our story</h2>
                 <p>Founded in 2015, Heaven Gate has grown from a small family business into one of the region's most respected real estate agencies. Our journey began with a simple mission: to make the process of buying and selling homes as smooth and stress-free as possible.</p>
                 <p>Over the years, we've built lasting relationships with thousands of clients, helping them navigate one of life's most important decisions. Our success is measured not just in transactions, but in the smiles on our clients' faces when they receive their keys.</p>
                 <p>Today, we combine traditional values with cutting-edge technology to deliver an unparalleled real estate experience. Whether you're a first-time buyer or a seasoned investor, we're here to guide you every step of the way.</p>
@@ -90,7 +91,7 @@
             </div>
         </div>
     </section>
-    <section class="status">
+    <section class="status" data-aos="fade-up" data-aos-duration="900">
         <div class="stat_item">
             <h2>8,000+</h2>
             <p>Happy Family</p>
@@ -108,7 +109,7 @@
             <p>Client Satisfaction</p>
         </div>
     </section>
-    <section class="why-choose" style="margin-bottom: 100px;">
+    <section class="why-choose" style="margin-bottom: 100px;" data-aos="fade-up" data-aos-duration="900">
         <h2>Why Choose</h2>
         <h1>Heaven gate?</h1>
         <div class="choose-cards">
@@ -141,8 +142,8 @@
             </div>
         </div>
     </section>
-    <section class="team">
-        <h2>our team</h2>
+    <section class="team" data-aos="fade-up" data-aos-duration="900">
+        <h2 data-aos="zoom-in" data-aos-duration="1000">our team</h2>
         <article>
             <div class="team_members">
                 <img src="../images/IMG-20250704-WA0053.jpg" alt="" class="">
@@ -407,5 +408,7 @@ setInterval(() => {
 }, 3000); // 4000 = 4 seconds
 
 </script> -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
 </body>
 </html>

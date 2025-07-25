@@ -1277,6 +1277,7 @@ body {
 .team{
     text-align: center;
     position: relative;
+    /* max-width: 1300px; */
     margin-bottom: 450px;
     padding: 10px 20px;
     /* background: yellow; */
@@ -1305,9 +1306,10 @@ body {
     transform: translateY(170px);
     gap: 2rem;
     align-items: center;
+    max-width: 1300px;
     justify-content: center;
     /* width: 100%; */
-    /* margin: 0 auto; */
+    margin: 0 auto;
     flex-wrap: wrap;
 }
 .team_members{
@@ -1667,7 +1669,8 @@ form .forgot {
 }
 .trending{
     display: flex;
-    /* margin: 0 auto; */
+    margin: 0 auto;
+    max-width: 1300px;
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;

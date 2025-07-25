@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./assets/CSS/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="./assets/font awesome/fontawesome-free-5.15.4-web/css/all.min.css"> -->
 </head>
 <body>
@@ -66,7 +67,7 @@
             </a>
         </div>
     </section>
-    <section class="banner">
+    <section class="banner" data-aos="fade-up" data-aos-duration="600">
         <div class="bannertext">
             <!-- <span></span> -->
             <h1>Find Your way home with Heaven Gate</h1>
@@ -77,7 +78,7 @@
     </section>
     <h2 class="feature">Featured Properties</h2>
     <section class="property">
-        <article class="top_prop">
+        <article class="top_prop" data-aos="fade-right" data-aos-duration="1000">
             <a href="./assets/HTML/properties.html" class="top1">
                 <h1>Trendy</h1>
                 <i class="fas fa-chevron-right icon"></i>
@@ -87,7 +88,7 @@
                 <i class="fas fa-chevron-right icon"></i>
             </a>
         </article>
-        <article class="down_prop">
+        <article class="down_prop" data-aos="fade-up" data-aos-duration="1000">
             <a href="./assets/HTML/properties.html" class="down1">
                 <h1>on-sale</h1>
                 <i class="fas fa-chevron-right icon"></i>
@@ -104,7 +105,7 @@
             </div>
         </article>
     </section>
-     <section class="services">
+     <section class="services" data-aos="fade-up" data-aos-duration="800">
         <h2>Our Service</h2>
         <h1>What We Do?</h1>
         <div class="service-cards">
@@ -143,7 +144,7 @@
             </div>
         </div>
     </section>
-    <section class="carousel">
+    <section class="carousel" data-aos="zoom-in" data-aos-duration="1100">
         <h2>our locations</h2>
         <h1>for you</h1>
         <div class="swiper property-carousel">
@@ -234,7 +235,7 @@
             <div class="swiper-button-next"></div> -->
         </div>
     </section>
-    <section class="why-choose">
+    <section class="why-choose" data-aos="fade-up" data-aos-duration="800">
         <h2>Why Choose</h2>
         <h1>Heaven gate?</h1>
         <div class="choose-cards">
@@ -255,7 +256,7 @@
             </div>
         </div>
     </section>
-    <section class="reviews">
+    <section class="reviews" data-aos="fade-up" data-aos-duration="800">
         <h2>customers</h2>
         <h1>reviews</h1>
         <div class="swiper review-carousel">
@@ -372,7 +373,7 @@
     </section> -->
 
 
-    <section class="contact-section" style="max-width: 1200px; margin-bottom: 100px;">
+    <section class="contact-section" style="max-width: 1200px; margin-bottom: 100px;" data-aos="zoom-in" data-aos-duration="1000">
     <div class="contact-info">
       <h3>Get In Touch</h3>
       <h2>How We Can Help You?</h2>
@@ -522,6 +523,8 @@
             </div>
         </div>
     </section> -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/JS/index.js"></script>
 </body>
